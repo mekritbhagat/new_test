@@ -1,0 +1,78 @@
+<div class="mat-cards">
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start strech">
+    <div fxFlex="1 1 65%" fxFlexAlign="center" fxFlexOffset="1%">
+      <mat-card class="example-card mat-elevation-z4">
+        <mat-card-title-group>
+          <img mat-card-lg-image data-src="" class="lazyload">
+        </mat-card-title-group>
+      </mat-card>
+    </div>
+
+    <!-- <div fxFlex="1 1 32%" fxFlexAlign="center" fxFlexOffset="1%">
+      <div fxLayout="column">
+        <mat-card class="example-card mat-elevation-z6">
+          <img mat-card-image data-src="" class="lazyload">
+          <mat-card-footer>Headlines</mat-card-footer>
+        </mat-card>
+      </div>
+      <div fxLayout="column">
+        <mat-card class="example-card mat-elevation-z6">
+          <div class="md:flex bg-white rounded-lg p-6">
+            <img class="h-16 w-16 rounded-full mx-auto md:mx-0 mx-auto" src="avatar.png">
+            <div class="text-center">
+              <h2 class="text-lg">
+                Hello
+              </h2>
+              <div class="text-purple-500">hello</div>
+              <div class="text-gray-600">jan</div>
+              <div class="text-gray-500">martin</div>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </div> -->
+
+    <div fxFlex="1 1 35%" fxFlexAlign="center">
+      <mat-list>
+        <mat-list-item>
+          <mat-card class="card-body">
+            <mat-list>
+              <h3 mat-subheader>Top News</h3>
+              <mat-list-item *ngFor="let folder of folders; last as last">
+                <a style="cursor: pointer;" [routerLink]="'/view'">{{folder.updated}}</a>
+                <mat-divider [vertical]="true" *ngIf="!last"></mat-divider>
+              </mat-list-item>
+            </mat-list>
+          </mat-card>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+
+  <div fxLayout="row" fxLayoutGap="2%" fxLayoutAlign="center" fxLayout.xs="column" class="margin-top-row">
+    <div fxFlex="1 1 40%" fxFlexAlign="center" class="margin-left-row">
+      <mat-list>
+        <mat-list-item>
+          <mat-card class="card-body">
+            <mat-card-title-group>
+              <img mat-card-lg-image>
+              <mat-card-title>Title</mat-card-title>
+              <mat-card-subtitle>Group</mat-card-subtitle>
+            </mat-card-title-group>
+          </mat-card>
+        </mat-list-item>
+      </mat-list>
+    </div>
+    <div fxFlex="1 1 30%" fxFlexAlign="center">
+      <mat-list>
+        <mat-list-item>
+          <mat-card class="card-body">
+            <mat-card-title-group>
+              <img mat-card-lg-image>
+            </mat-card-title-group>
+          </mat-card>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</div>

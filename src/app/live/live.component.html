@@ -1,0 +1,104 @@
+<!-- <header class="v-header container">
+  <div class="fullscreen-video-wrap">
+    <video src="../assets/img/bg.mp4" loop="true" autoplay="true"></video>
+  </div>
+  <div class="header-overlay"></div>
+  <div class="header-content">
+    <h1>Online HatBazar</h1>
+    <a mat-button routerLink="/home">
+      <span class="button alternative">Home</span>
+    </a>
+  </div>
+</header> -->
+
+<!-- <mat-video #video src="localOrRemoteVideo.mp4"></mat-video> -->
+<!-- <mat-video [autoplay]="true" [preload]="true" [fullscreen]="true" color="accent" spinner="spin" poster="image.jpg">
+  <source matVideoSource src="https://mdbootstrap.com/img/video/Sail-Away.mp4" type="video/mp4">
+  <source src="https://mdbootstrap.com/img/video/Sail-Away.mp4" type="video/webm">
+  <track matVideoTrack src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+  <track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
+</mat-video> -->
+
+<!-- <router-outlet></router-outlet>
+
+<mat-video #video src="localOrRemoteVideo.mp4"></mat-video> -->
+
+<div class="row h-75 no-gutters">
+  <div class="col-9 bg-light border h-100 d-flex justify-content-center overlay-container">
+    <video class="video-fluid z-depth-1" autoplay loop controls muted *ngIf="isSize"
+      [ngClass]="{'fullscreen': isCardExpanded}">
+      <button mat-icon-button (click)="expand()"></button>
+      <source src="{{videoSource}}" type="video/mp4" />
+    </video>
+  </div>
+
+  <div class="bg-light scrollable h-100" style="margin: 1%;">
+    <p><b><i>Name </i></b>Hi</p>
+</div>
+</div>
+
+<!-- <div class="video">
+      <video muted autoplay loop style="width: 500px">
+          <source src="{{videoSource}}" type="video/mp4" />
+          Browser not supported
+      </video>
+  </div> -->
+
+<!-- <mat-card [ngClass]="{'fullscreen': isCardExpanded}">
+    <mat-card-title>
+      <button (click)="expand()">Expand me</button>
+    </mat-card-title>
+    <mat-card-content>
+      123
+    </mat-card-content>
+  </mat-card> -->
+<!-- <div class="content video" *ngIf="isSize">
+    <mat-video
+      #vid
+      [ngClass]="ngclass"
+      src="https://mdbootstrap.com/img/video/Sail-Away.mp4"
+      [title]="title"
+      [autoplay]="autoplay"
+      [preload]="preload"
+      [loop]="loop"
+      [fullscreen]="fullscreen"
+      [download]="download"
+      [quality]="quality"
+      [keyboard]="keyboard"
+      [color]="color"
+      [spinner]="spinner"
+      [poster]="poster"
+      [overlay]="overlay"
+      [(muted)]="muted"
+      [playsinline]="playsinline"
+      [showFrameByFrame]="showFrameByFrame"
+      [(time)]="currentTime"
+    >
+    </mat-video>
+  </div> -->
+
+
+
+<!-- <div class="row h-75 no-gutters">
+    <div class="col-9 bg-light border h-100 d-flex justify-content-center overlay-container" style="margin: 1%;">
+  
+        <video class="w-100 h-100" #myVideo>
+        </video>
+        
+        <div class="justify-content-center overlay-item">
+            <button mat-raised-button class="btn btn-sm btn-primary">Video</button>
+            <button mat-raised-button class="btn btn-sm btn-primary ml-1">Audio</button>
+            <button mat-raised-button class="btn btn-sm btn-primary ml-1">Screen Share</button>
+        </div>
+    </div>
+  
+    <div class="col-2 bg-light scrollable h-100">
+        <p><b><i>Name </i></b>Hi</p>
+    </div>
+  </div> -->
+
+<!-- <div class="row flex-nowrap room-members">
+    <div class="col" *ngFor="let mitronPeer of mitronPeers">
+        <video [id]="mitronPeer?.peerId" class="h-100 border border-danger" #peerVideo></video>
+    </div>
+  </div> -->

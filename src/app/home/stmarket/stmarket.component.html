@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 rtl class="main-heading">
+        {{ "anms.examples.stocks.title" | translate }}
+      </h1>
+    </div>
+  </div>
+  <div class="row" rtl>
+    <ng-container *ngIf="stocks$ | async as stocks">
+      <div class="col-md-6 col-lg-3">
+        <form autocomplete="false">
+          <mat-form-field>
+            <input
+              matInput
+              [placeholder]="'anms.examples.stocks.symbol' | translate"
+              [value]="stocks.symbol"
+              (keyup)="onSymbolChange($event.target.value)"
+            />
+          </mat-form-field>
+        </form>
+        <p>
+          {{ "anms.examples.stocks.description" | translate }} GOOGL, FB, AAPL,
+          NVDA, AMZN, TWTR, SNAP, TSLA...
+        </p>
+        <br />
+      </div>
+      <div class="col-md-6 col-lg-4 offset-lg-1">
+        <mat-spinner *ngIf="stocks.loading"></mat-spinner>
+        <mat-card *ngIf="stocks.stock">
+          <mat-card-title
+            >{{ stocks.stock.symbol }}
+            <span
+              >{{ stocks.stock.last }} {{ stocks.stock.ccy }}</span
+            ></mat-card-title
+          >
+          <mat-card-subtitle>
+            <p [ngClass]="{ negative: stocks.stock.changeNegative }">
+              <mat-icon icon="caret-up" *ngIf="stocks.stock.changePositive" ></mat-icon>
+              <mat-icon icon="caret-down" *ngIf="stocks.stock.changeNegative"></mat-icon>
+              {{ stocks.stock.change }} ({{ stocks.stock.changePercent }}%)
+            </p>
+          </mat-card-subtitle>
+          <mat-card-content>{{ stocks.stock.exchange }}</mat-card-content>
+        </mat-card>
+        <p *ngIf="stocks.error" class="error-state">
+          <mat-icon icon="exclamation-triangle" size="3x"></mat-icon>
+          <br /><br />
+          <span>
+            {{ "Tho" | translate }}
+            <span class="symbol">{{ stocks.symbol }}</span>
+            {{ "The" | translate }}
+          </span>
+        </p>
+        <br />
+        <br />
+      </div>
+    </ng-container>
+    <div class="col-md-12 col-lg-4">
+      <p>
+        {{ "Tow" | translate }} <code>HTTP</code>
+        {{ "Tow" | translate }}
+        <code>@ngrx/effects</code>
+        {{ "Tow" | translate }}
+      </p>
+      <p>{{ "Tow" | translate }}</p>
+      <p>
+        {{ "Tow" | translate }} <code>.switchMap</code>.
+      </p>
+      <p>{{ "One" | translate }}</p>
+    </div>
+  </div>
+</div>

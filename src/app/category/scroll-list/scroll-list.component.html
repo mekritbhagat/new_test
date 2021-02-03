@@ -1,0 +1,12 @@
+<h2 style="margin-bottom: 0;">Top News</h2>
+
+<mat-list appScrollable class="scroll-w-h">
+  <mat-list-item
+    appOffsetTop
+    [class.selected]="selectedItem === index"
+    (click)="selectedItem = index"
+    *ngFor="let item of items; let index = index"
+  >
+    {{ item }}
+  </mat-list-item>
+</mat-list>

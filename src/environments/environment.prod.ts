@@ -1,3 +1,9 @@
 export const environment = {
-  production: true
+  production: false,
+  title: 'Express News',
+  urls: '',
+  appIcon: '',
+  appName: '',
+  i18nPrefix: '',
+  mocked: '',
 };

@@ -1,0 +1,70 @@
+.container {
+    width: 100%;
+}
+
+.places {
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  margin-bottom: 1%;
+}
+
+card-body {
+  min-width: 100px;
+  max-width: 120px;
+  width: 100%;
+}
+
+.mat-card {
+  border-radius: none;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+@media (max-width: 95%) {
+  .container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+
+:host {
+  background: rgb(19, 19, 19);
+  color: #fff;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #353535;
+  font-size: 3rem;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card:hover {
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.17em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+  transform: translateY(-3px) scale(1.1);
+}

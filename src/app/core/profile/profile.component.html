@@ -1,0 +1,41 @@
+<mat-card class="mat-cards">
+  <h1>Hi {{ hero }}</h1>
+  <div fxLayout="column" fxLayoutAlign="start stretch">
+    <mat-tab-group mat-align-tabs="end">
+      <mat-tab label="First">
+        <div class="card-body">
+          <span>Name</span>
+          <br />
+          <span>Phone</span>
+          <br />
+          <span>Anothers</span>
+        </div>
+      </mat-tab>
+      <mat-tab label="Second">
+        <div class="card-body">
+          <span>Name</span>
+          <br />
+          <span>Phone</span>
+        </div>
+      </mat-tab>
+      <mat-tab label="Third">
+        <div class="card-body">
+          <span>Phone</span>
+          <br />
+          <span>Anothers</span>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center">
+    <div fxFlexFill>
+      <mat-divider [inset]="true"></mat-divider>
+      <p>profile works!</p>
+    </div>
+    <div fxFlex="1 1 80%" fxFlexAlign="center">
+      <br />
+      <button mat-raised-button (click)="update()">Change</button>
+    </div>
+  </div>
+</mat-card>

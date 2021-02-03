@@ -1,0 +1,54 @@
+mat-grid-tile {
+  background: lightblue;
+}
+
+.mat-cards {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.spac {
+    // margin-left: 14%;
+    flex: 1 1 auto;
+}
+
+.space {
+  margin-left: 84%;
+  color: green;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+.example-button-row button {
+  display: table-cell;
+  margin-right: 8px;
+}
+
+// .example-flex-container {
+//   display: flex;
+//   justify-content: space-between;
+//   width: 480px;
+// }
+
+// .example-button-container {
+//   display: flex;
+//   justify-content: center;
+//   width: 120px;
+// }
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.example-form-field {
+  width: 200px;
+}
+
+mat-slider {
+  width: 300px;
+}

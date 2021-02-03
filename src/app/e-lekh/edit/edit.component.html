@@ -1,0 +1,144 @@
+<mat-card style="height: 95vh;">
+  <mat-card-content>
+    <mat-grid-list cols="1" rowHeight="100px" style="margin-top: 1rem;">
+      <mat-grid-tile>
+        <form class="example-form">
+          <div style="margin: 2%;"></div>
+          <mat-form-field>
+            <mat-label>Choose Type</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let story of storis" [value]="story.value">
+                {{ story.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          &nbsp;
+          <mat-form-field class="exampl-full-width">
+            <mat-label>Full Name</mat-label>
+            <input
+              matInput
+              #message
+              maxlength="256"
+              placeholder="Please specify name or email here......"
+            />
+            <!-- <mat-hint align="start"
+              ><strong>Don't disclose personal info</strong>
+            </mat-hint> -->
+            <mat-hint align="end">{{ message.value.length }} / 256</mat-hint>
+          </mat-form-field>
+        </form>
+        <mat-slider
+          class="example-margin"
+          [disabled]="disabled"
+          [max]="max"
+          [min]="min"
+          [(ngModel)]="value" (selectionChange)="triggerResize()"
+        >
+        </mat-slider>
+        <!-- <mat-form-field>
+              <mat-label>Custom calendar header</mat-label>
+              <input matInput [matDatepicker]="picker">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker [calendarHeaderComponent]="exampleHeader"></mat-datepicker>
+            </mat-form-field> -->
+      </mat-grid-tile>
+
+      <!-- <mat-grid-tile>
+        <form class="example-form">
+          <mat-form-field class="example-ful-height">
+            <mat-label>Leave a comment</mat-label>
+            <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+          </mat-form-field>
+
+          <div class="paper">
+                <div class="paper-content">
+                    <textarea autofocus>Hello world !&#10;Here's a paper textarea tag.</textarea>
+                </div>
+            </div>
+        </form>
+      </mat-grid-tile> -->
+
+      <!-- <mat-grid-tile>
+            <label for="singleFile">Upload file</label>
+            <input id="singleFile" type="file" [fileUploadInputFor]="fileUploadQueue"/>
+            <br />
+            <mat-file-upload-queue #fileUploadQueue [fileAlias]="'file'" [httpUrl]="'http://localhost:8180/jax-rs-jersey-application-sample'">
+              <mat-file-upload [file]="file" [id]="i" *ngFor="let file of fileUploadQueue.files; let i = index"></mat-file-upload>
+            </mat-file-upload-queue>
+  
+            <div [fileUploadInputFor]="fileUploadQueue" class="upload-drop-zone">
+              Just drag and drop files here
+            </div>
+  
+            <div style="width: 500px;">
+              <mat-file-upload-queue #fileUploadQueue [fileAlias]="'file'" [httpUrl]="'http://localhost:8180/jax-rs-jersey-application-sample'" multiple>
+                <mat-file-upload [file]="file" [id]="i" *ngFor="let file of fileUploadQueue.files; let i = index"></mat-file-upload>
+              </mat-file-upload-queue>
+            </div>
+          </mat-grid-tile> -->
+
+      <!-- <div style="text-align: center;">
+            <app-fileup (complete)="onFileComplete($event)"></app-fileup>
+          </div> -->
+    </mat-grid-list>
+
+    <!-- <mat-grid-list cols="1">
+          <mat-grid-tile>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                  <div class="row card">
+                      <div class="col-sm-12">
+                          <h4>Upload File</h4>
+                          <div class="fileselector">
+                              <input type="file" name="fileUpload" id="fileupload" multiple ng2FileSelect [uploader]="uploader">
+                          </div>
+                          <div>
+                              <div class="row uploadList" *ngFor="let item of uploader.name">
+                                  <div class="col-sm-4">{{item.file.name}}</div>
+                                  <div class="col-sm-4">
+                                      <div class="progress">
+                                          <div class="progress-bar bg-success" [ngStyle]="{ 'width':item.progress+'%'}"></div>
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-4">
+                                      <button type="button" class="btn btn-dark" (click)="item.upload()">Upload</button>
+                                      <button type="button" class="btn btn-danger" (click)="item.remove()">Cancel</button>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row" *ngIf="uploader?.queue?.length > 0">
+                              <button type="button" class="btn btn-primary" (click)="uploader.uploadAll()">Upload All</button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row card">
+                      <h5>Download Section</h5>
+                      <div class="row" *ngFor="let item of attachmentList" style="margin:10px;">
+                          <div class="col-sm-7">{{item.originalName}}</div>
+                          <div class="col-sm-5" style="text-align: center;">
+                              <button>Download</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </mat-grid-tile>
+        </mat-grid-list> -->
+
+          <div class="paper">
+            <div class="paper-content">
+                <!-- <textarea autofocus placeholder="Type"></textarea> -->
+                  <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="" cdkAutosizeMaxRows=""></textarea>
+            </div>
+        </div>
+  </mat-card-content>
+
+  <!-- <mat-card-actions>
+    <div class="space">
+      <button mat-stroked-button color="primary" (click)="editStory()">
+        Submit
+      </button>
+    </div>
+  </mat-card-actions> -->
+</mat-card>

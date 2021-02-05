@@ -23,6 +23,8 @@ import { GridItemComponent } from './grid-item/grid-item.component';
 import { ScrollListComponent } from './scroll-list/scroll-list.component';
 import { GreetComponent } from './greet/greet.component';
 import { FoodComponent } from './food/food.component';
+import { OpinionComponent } from './opinion/opinion.component';
+import { PutOpinionComponent } from './opinion/put-opinion/put-opinion.component';
 
 const routes: Routes = [
   // {
@@ -84,7 +86,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [CategoryComponent, MediaQueryComponent, EntertainComponent, GlobalComponent, LifestyleComponent, PrabidhiComponent, SportsComponent, StoryComponent, BusinnessComponent, GridItemComponent, ScrollListComponent, GreetComponent, FoodComponent],
+  declarations: [CategoryComponent, MediaQueryComponent, EntertainComponent, GlobalComponent, LifestyleComponent, PrabidhiComponent, SportsComponent, StoryComponent, BusinnessComponent, GridItemComponent, ScrollListComponent, GreetComponent, FoodComponent, OpinionComponent, PutOpinionComponent],
   imports: [
     CommonModule,
     SharedModule,

@@ -3,9 +3,6 @@
   <mat-drawer-container class="containers" autosize *ngIf="deviceXs">
     <mat-drawer #drawer class="sidenavs" mode="side">
       <div class="space-block">
-        <!-- <button mat-icon-button>
-          <mat-icon>close</mat-icon>
-        </button> -->
       </div>
   
       <button color="primary" mat-button [routerLink]="'/live'">
@@ -113,21 +110,7 @@
     </div>
   </mat-drawer-container>
 
-  <mat-toolbar>
-
-    <!-- <mat-toolbar-row>
-(click)="showFiller = !showFiller"
-  submit(form) {
-    console.log('test');
-    this.wait = true;
-    setTimeout(() => {
-      this.wait = false
-    },1000);
-  }
-    showFiller = false;
-  options: FormGroup;
-  wait:boolean = false;
-    </mat-toolbar-row> -->
+  <!-- <mat-toolbar>
 
     <mat-toolbar-row *ngIf="!deviceXs">
       <div class="toolbar" role="banner">
@@ -140,12 +123,11 @@
         <div class="spacer"></div>
 
         <span>
-          <!-- <app-refresh></app-refresh> -->
+          <app-refresh></app-refresh>
         </span>
         &nbsp;
-        <!-- <mat-icon style="padding-left: 1%; padding-right: 1%;">add</mat-icon> -->
         <button mat-icon-button aria-label="Contact" routerLink="/view">
-          <mat-icon>add</mat-icon>
+          <mat-icon>info</mat-icon>
         </button>
         <button mat-icon-button aria-label="Contact" routerLink="/about">
           <mat-icon>add</mat-icon>
@@ -159,83 +141,13 @@
         </span>
       </div>
     </mat-toolbar-row>
+  </mat-toolbar> -->
 
-    <!-- <mat-toolbar-row style="position: fixed; top: 8%; height: 7%; overflow: hidden;" *ngIf="!deviceXs" color="primary">
-      <span class="spacer"></span>
-      <div>
-        <a mat-button [routerLink]="'/live'"> Stream </a>
-        <a mat-button [routerLink]="'/ct/cate/global'"> Global </a>
-        <a mat-button [routerLink]="'/ct/cate/sport'"> Sports </a>
-        <a mat-button [routerLink]="'/ct/cate/busi'"> Economic </a>
-        <a mat-button [routerLink]="'/ct/cate/entertain'"> Entertainment </a>
-        <a mat-button [routerLink]="'/ct/cate/prabidhi'"> Technology </a>
-        <a mat-button [routerLink]="'/en/auth'"> Login </a>
-        <a mat-button [routerLink]="'/ct/cate/lifestyle'"> Life Style </a>
-        <a mat-button [routerLink]="'/ct/cate/food'"> Food </a>
-        <a mat-button [routerLink]="'/ct/cate/story'"> Story </a>
-        <a mat-button [routerLink]="'/ct/cate/adv'"> Advertisement </a>
-        <a mat-button [routerLink]="'/lekh'"> E-Lekh </a>
-        <a mat-button [routerLink]="'/en/auth'"> Login </a>
-        <a mat-button [routerLink]="'/en/profile'">News</a>
-        <a
-        aria-label="Angular on twitter"
-        target="_blank"
-        rel="noopener"
-        href="https://twitter.com/angular"
-        title="Twitter"
-      >
-        <svg
-          id="twitter-logo"
-          height="24"
-          data-name="Logo"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 400 400"
-        >
-          <rect width="400" height="400" fill="none" />
-          <path
-            d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23"
-            fill="#fff"
-          />
-        </svg>
-      </a>
-        <mat-slide-toggle style="margin: 1%;"></mat-slide-toggle>
-      <mat-slide-toggle style="margin: 1%;"
-        (change)="onAutoNightModeToggle($event)">
-      </mat-slide-toggle>
-      [checked]="settings$.autoNightMode"
-  
-      </div>
-    </mat-toolbar-row>
-   -->
-    <!-- <mat-toolbar-row>
-        {{news}}<span style="font-size: 18px;">&nbsp;you easily ...</span>
-    </mat-toolbar-row> -->
-  </mat-toolbar>
-
-  <!-- <div class="container container-fluid">
-    <div class="row">
-
-      <div class="col-10">
-        <div class="content-left">
-          <router-outlet></router-outlet>
-        </div>  
-      </div>
-
-      <div class="col">
-        <div class="content-center">
-          <app-today-news></app-today-news>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-  <!-- <div class="body-margin center-align">
-    <router-outlet></router-outlet>
-  </div> -->
   <div>
     <app-header></app-header>
-    <div style="margin: 1%;">
-      <router-outlet></router-outlet>
-    </div>
   </div>
 </div>
+
+<footer class="blog-footer">
+  <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+</footer>

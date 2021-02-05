@@ -55,25 +55,25 @@ p {
   opacity: 0.8;
 }
 
-.toolbars {
-  position: fixed;
-  top: 8%;
-  left: 0;
-  right: 0;
-  height: 7%;
-  display: flex;
-  align-items: center;
-  background-color: #1976d2;
-  color: white;
-  font-weight: 600;
-}
+// .toolbars {
+//   position: fixed;
+//   top: 8%;
+//   left: 0;
+//   right: 0;
+//   height: 7%;
+//   display: flex;
+//   align-items: center;
+//   background-color: #1976d2;
+//   color: white;
+//   font-weight: 600;
+// }
 
-.toolbars .textcenter {
-  right: 50%;
-  left: 50%;
-  margin: 5%;
-  align-items: center;
-}
+// .toolbars .textcenter {
+//   right: 50%;
+//   left: 50%;
+//   margin: 5%;
+//   align-items: center;
+// }
 
 .card-container {
   display: flex;
@@ -247,4 +247,13 @@ ul {
 
 mat-icon.toolbar-icon {
   color: #253c98;
+}
+
+
+.blog-footer {
+  padding: 2rem 0;
+  color: #727272;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
 }

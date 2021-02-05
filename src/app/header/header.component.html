@@ -1,3 +1,32 @@
+<header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+        <div class="col-4 pt-1">
+            <span>Welcome</span>
+        </div>
+
+        <div class="col-4 text-center">
+            <a class="blog-header-logo text-dark" href="#">Large</a>
+        </div>
+
+        <div class="col-4 text-center">
+            <a class="btn btn-sm btn-outline-primary" href="#">Sign up</a>
+        </div>
+    </div>
+</header>
+
+<!-- <nav class="nav nav-pills flex-column flex-sm-row">
+    <div class="flex-sm-fill text-sm-center nav-link">
+        <span>Welcome</span>
+    </div>
+    <a class="flex-sm-fill text-sm-center nav-link" href="#">
+        <img width="30" alt="Angular Logo"
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
+    </a>
+    <a class="flex-sm-fill text-sm-center nav-link" href="#">
+        <mat-icon>info</mat-icon>
+    </a>
+</nav> -->
+
 <nav style="background-color: #e3f2fd;">
 
     <ul class="nav justify-content-center">
@@ -31,6 +60,9 @@
             <a class="nav-link" [routerLink]="'/ct/cate/lifestyle'">Lifestyle</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" [routerLink]="'/ct/cate/lifestyle'">Culture</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" [routerLink]="'/ct/cate/food'">Food</a>
         </li>
         <!-- <li class="nav-item">
@@ -38,3 +70,7 @@
         </li> -->
     </ul>
 </nav>
+
+<div style="margin: 1%;">
+    <router-outlet></router-outlet>
+</div>

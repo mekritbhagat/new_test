@@ -89,3 +89,20 @@ main {
   padding: 1rem;
 
 }
+
+
+
+
+
+
+.blog-post {
+  margin-bottom: 4rem;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+article {
+  display: block;
+}

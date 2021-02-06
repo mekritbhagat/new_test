@@ -1,14 +1,22 @@
-.rounded {
-    border-radius: .25rem!important;
+:host {
+    padding: auto;
+    display: grid;
+  
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(4, 200px);
+    grid-gap: 22px;
 }
-
-.bg-dark {
-    background-color: #849db6!important;
+  
+.mycard {
+    display: grid;
+    place-content: center;
+    font-family: sans-serif;
+    font-size: 100%;
+    border-radius: 15px;
 }
-.text-white {
-    color: #fff!important;
-}
-
-.space-two {
-    margin: 1%;
-}
+  
+// div a:hover,
+// div a:focus {
+//     cursor: pointer;
+//     text-decoration: none;
+// }

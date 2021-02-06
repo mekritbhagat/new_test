@@ -1,9 +1,8 @@
 :host {
     padding: auto;
     display: grid;
-  
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(4, 200px);
+    // grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(4, auto-fit);
     grid-gap: 22px;
 }
   
@@ -15,8 +14,8 @@
     border-radius: 15px;
 }
   
-// div a:hover,
-// div a:focus {
-//     cursor: pointer;
-//     text-decoration: none;
-// }
+div a:hover,
+div a:focus {
+    cursor: pointer;
+    text-decoration: none;
+}

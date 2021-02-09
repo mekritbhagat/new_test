@@ -24,6 +24,7 @@ import { ScrollListComponent } from './scroll-list/scroll-list.component';
 import { GreetComponent } from './greet/greet.component';
 import { FoodComponent } from './food/food.component';
 import { OpinionComponent } from './opinion/opinion.component';
+import { ViewPostComponent } from './opinion/view-post/view-post.component';
 
 const routes: Routes = [
   // {
@@ -88,7 +89,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [CategoryComponent, MediaQueryComponent, EntertainComponent, GlobalComponent, LifestyleComponent, PrabidhiComponent, SportsComponent, StoryComponent, BusinnessComponent, GridItemComponent, ScrollListComponent, GreetComponent, FoodComponent, OpinionComponent],
+  declarations: [CategoryComponent, MediaQueryComponent, EntertainComponent, GlobalComponent, LifestyleComponent, PrabidhiComponent, SportsComponent, StoryComponent, BusinnessComponent, GridItemComponent, ScrollListComponent, GreetComponent, FoodComponent, OpinionComponent, ViewPostComponent],
   imports: [
     CommonModule,
     SharedModule,
@@ -103,6 +104,7 @@ const routes: Routes = [
     // CssGridAreaDirective,
     // CssGridDirective,
   ],
-  exports: [MediaQueryComponent, GridItemComponent, ScrollListComponent]
+  exports: [MediaQueryComponent, GridItemComponent, ScrollListComponent],
+  entryComponents: [ViewPostComponent]
 })
 export class CategoryModule { }

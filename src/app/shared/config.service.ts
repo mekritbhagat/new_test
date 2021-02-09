@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Config } from './app.model';
+import { Config, ProductModel } from './app.model';
 import { tap } from 'rxjs/operators';
 
 let _config: Config;

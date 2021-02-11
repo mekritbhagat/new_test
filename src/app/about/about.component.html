@@ -18,40 +18,11 @@
         </div>
       </div>
 
-      <form [formGroup]="exampleForm" novalidate (ngSubmit)="save(exampleForm.value, exampleForm.valid, $event)">
-        <form class="example-form">
-          <mat-form-field class="example-full-width">
-            <mat-label>First name</mat-label>
-            <input matInput>
-          </mat-form-field>
-          <mat-form-field class="example-full-width">
-            <mat-label>Email</mat-label>
-            <input matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
-            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-              Please enter a valid email address
-            </mat-error>
-            <mat-error *ngIf="emailFormControl.hasError('required')">
-              Email is <strong>required</strong>
-            </mat-error>
-          </mat-form-field>
-          <mat-form-field class="example-full-width">
-            <mat-label>Telephone</mat-label>
-            <span matPrefix>+977 &nbsp;</span>
-            <input type="tel" matInput placeholder="555-555-1234">
-            <mat-icon matSuffix>mode_edit</mat-icon>
-          </mat-form-field>
-          <mat-form-field class="example-button-width">
-            <mat-label>Leave a comment</mat-label>
-            <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-          </mat-form-field>
 
-          <button mat-raised-button color="primary" class="example-full-width">Submit</button>
-        </form>
-      </form>
     </div>
   </section>
 
-  <section class="basic-container justify-content-center">
+  <!-- <section class="basic-container justify-content-center">
 
-  </section>
+  </section> -->
 </div>

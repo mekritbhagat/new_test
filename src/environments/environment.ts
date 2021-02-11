@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  title: 'Express News',
+  title: 'THE MITHILA',
   Url: 'http://localhost:3000/',
   appIcon: '',
   appName: '',

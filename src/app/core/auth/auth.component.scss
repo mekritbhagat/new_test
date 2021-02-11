@@ -5,27 +5,25 @@
 //   background-image: url('../../../assets/icons/icon-128x128.png');
 // }
 
-.loginwrapper {
-  background: url('../../../assets/img/one.webp') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+// .loginwrapper {
+//   background: url('../../../assets/img/one.webp') no-repeat center center fixed;
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+// }
 
 .logincontainer {
-  width: 100%;
   max-width: 530px;
   min-width: 430px;
-  min-height: 640px;
-  height: 100%;
+  min-height: 460px;
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   background-color: #ffffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
   position: relative;
   display: block;
-  margin: 4%;
+  // margin: 25%;
 }
 
 .vertical-center {

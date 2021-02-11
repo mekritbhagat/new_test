@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { PagerrComponent } from './pagerr/pagerr.component';
+import { ViewComponent } from './view/view.component';
 
 const routes: Routes = [
   {
@@ -25,7 +26,10 @@ const routes: Routes = [
     path: 'en', loadChildren: () => import('./core/core.module').then(m => m.CoresModule)
   },
   {
-    path: '', redirectTo: '/home', pathMatch: 'full'
+    path: '', redirectTo: '/view', pathMatch: 'full'
+  },
+  {
+    path: 'view', component: ViewComponent
   },
   {
     path: '**', component: PagerrComponent

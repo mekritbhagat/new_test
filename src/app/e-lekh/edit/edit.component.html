@@ -1,6 +1,6 @@
-<mat-card style="height: 95vh;">
+<div style="height: 70vh;">
   <mat-card-content>
-    <mat-grid-list cols="1" rowHeight="100px" style="margin-top: 1rem;">
+    <mat-grid-list cols="1" rowHeight="100px" style="margin-top: 0.5rem;">
       <mat-grid-tile>
         <form class="example-form">
           <div style="margin: 2%;"></div>
@@ -18,45 +18,23 @@
             <input
               matInput
               #message
-              maxlength="256"
+              maxlength="70"
               placeholder="Please specify name or email here......"
             />
             <!-- <mat-hint align="start"
               ><strong>Don't disclose personal info</strong>
             </mat-hint> -->
-            <mat-hint align="end">{{ message.value.length }} / 256</mat-hint>
+            <mat-hint align="end">{{ message.value.length }} / 70</mat-hint>
           </mat-form-field>
         </form>
-        <mat-slider
-          class="example-margin"
-          [disabled]="disabled"
-          [max]="max"
-          [min]="min"
-          [(ngModel)]="value" (selectionChange)="triggerResize()"
-        >
-        </mat-slider>
-        <!-- <mat-form-field>
-              <mat-label>Custom calendar header</mat-label>
-              <input matInput [matDatepicker]="picker">
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker [calendarHeaderComponent]="exampleHeader"></mat-datepicker>
-            </mat-form-field> -->
+        <mat-card-actions>
+          <div class="space">
+            <button mat-stroked-button color="primary" (click)="editStory()">
+              POST
+            </button>
+          </div>
+        </mat-card-actions>
       </mat-grid-tile>
-
-      <!-- <mat-grid-tile>
-        <form class="example-form">
-          <mat-form-field class="example-ful-height">
-            <mat-label>Leave a comment</mat-label>
-            <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-          </mat-form-field>
-
-          <div class="paper">
-                <div class="paper-content">
-                    <textarea autofocus>Hello world !&#10;Here's a paper textarea tag.</textarea>
-                </div>
-            </div>
-        </form>
-      </mat-grid-tile> -->
 
       <!-- <mat-grid-tile>
             <label for="singleFile">Upload file</label>
@@ -128,17 +106,9 @@
 
           <div class="paper">
             <div class="paper-content">
-                <!-- <textarea autofocus placeholder="Type"></textarea> -->
-                  <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="" cdkAutosizeMaxRows=""></textarea>
+                  <textarea autofocus matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="" cdkAutosizeMaxRows=""></textarea>
             </div>
         </div>
   </mat-card-content>
 
-  <!-- <mat-card-actions>
-    <div class="space">
-      <button mat-stroked-button color="primary" (click)="editStory()">
-        Submit
-      </button>
-    </div>
-  </mat-card-actions> -->
-</mat-card>
+</div>

@@ -2,7 +2,6 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
 import { SharedService } from '../shared/shared.service';
-import { FillComponent } from './fill/fill.component';
 
 @Component({
   selector: 'app-view',
@@ -22,20 +21,6 @@ export class ViewComponent implements OnInit {
   // }
 
   ngOnInit(): void {
-  }
-
-  messages: Message[] = [
-    { from: "A", subject: "B", content: "C" },
-    { from: "", subject: "", content: "W" }
-  ];
-
-  openDialog(): void {
-    let dialogRef = this.dialog.open(FillComponent, {
-      width: '700px',
-      height: '600px',
-      data: 'Send Data'
-    });
-    dialogRef.componentInstance.event.subscribe((result) => {});
   }
 
 }

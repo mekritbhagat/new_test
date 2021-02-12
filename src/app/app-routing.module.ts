@@ -26,7 +26,7 @@ const routes: Routes = [
     path: 'en', loadChildren: () => import('./core/core.module').then(m => m.CoresModule)
   },
   {
-    path: '', redirectTo: '/view', pathMatch: 'full'
+    path: '', redirectTo: '/home', pathMatch: 'full'
   },
   {
     path: 'view', component: ViewComponent

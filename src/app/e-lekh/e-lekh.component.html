@@ -1,6 +1,6 @@
-<mat-card class="mat-cards">
+<div class="mat-cards">
   <!-- <mat-card-title>Reactive form</mat-card-title> -->
-  <mat-card class="mat-cards mat-elevation-z4">
+  <div (click)="editStory()" *ngIf="hideButton">
     <button mat-fab color="accent" aria-label="bookmark">
       <mat-icon>bookmark</mat-icon>
     </button>
@@ -11,6 +11,7 @@
         <mat-icon>edit</mat-icon>
       </button>
     </span>
+  </div>
     <!-- <div class="example-button-row">
         <div class="example-flex-container">
           <div class="example-button-container">
@@ -22,6 +23,5 @@
       <button mat-stroked-button color="primary" (click)="editStory()">
         Submit
       </button> -->
-    <app-edit *ngIf="!allowEdit"></app-edit>
-  </mat-card>
-</mat-card>
+    <app-edit *ngIf="allowEdit"></app-edit>
+</div>

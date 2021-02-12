@@ -5,6 +5,7 @@ import { FileUploader } from 'ng2-file-upload';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { Subject } from 'rxjs';
 import { takeUntil, take } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 const url = 'http://localhost:3000/upload';
 @Component({
@@ -24,17 +25,17 @@ export class EditComponent implements OnInit {
   attachmentList: any = [];
 
   @ViewChild('autosize') autosize: CdkTextareaAutosize;
-  constructor(private _ngZone: NgZone) { 
+  constructor(private _ngZone: NgZone, private router: Router) { 
     this.uploader.onCompleteItem = (item:any, response: any, status:any, headers: any) => {
       this.attachmentList.push(JSON.parse(response));
     }
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   editStory(): void {
-    
+    this.router.navigate(['/']);
   }
 
   triggerResize() {

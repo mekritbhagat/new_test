@@ -5,7 +5,6 @@ import { MatNativeDateModule } from '@angular/material/core';
 
 import { ViewComponent } from './view.component';
 import { SharedModule } from '../shared/shared.module';
-import { FillComponent } from './fill/fill.component';
 
 
 
@@ -15,7 +14,7 @@ const routes: Routes = [
   }
 ];
 @NgModule({
-  declarations: [ViewComponent, FillComponent],
+  declarations: [ViewComponent],
   imports: [
     CommonModule,
     SharedModule,

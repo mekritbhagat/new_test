@@ -15,6 +15,7 @@ export class ELekhComponent implements OnInit {
   min = 0;
   max = 10;
   allowEdit = false;
+  hideButton = true;
   uploader: FileUploader = new FileUploader({url: url});
   attachmentList: any = [];
 
@@ -24,11 +25,16 @@ export class ELekhComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   editStory(): void {
-    this.allowEdit = false;
+    this.allowEdit = true;
+    this.hideEdit();
+  }
+
+  hideEdit(): void {
+    this.hideButton = false;
   }
 
   onFileComplete(data: any) {

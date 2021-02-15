@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
 import { FormGroup, FormControl, Validators } from "@angular/forms";
-import * as _ from 'lodash';
+// import * as _ from 'lodash';
 import { DatePipe } from '@angular/common';
 import {Post} from '../core/Post';
 
@@ -90,7 +90,7 @@ export class DataService {
   }
 
   populateForm(employee) {
-    this.form.setValue(_.omit(employee,'departmentName'));
+    // this.form.setValue(_.omit(employee,'departmentName'));
   }
 
   getData(): Observable<Post[]> {

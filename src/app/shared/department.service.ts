@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 // import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
-import * as _ from 'lodash';
+// import * as _ from 'lodash';
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +28,7 @@ export class DepartmentService {
     if ($key == "0")
       return "";
     else{
-      return _.find(this.array, (obj) => { return obj.$key == $key; })['name'];
+      // return _.find(this.array, (obj) => { return obj.$key == $key; })['name'];
     }
   }
 

@@ -23,26 +23,22 @@
 
 <mat-video #video src="localOrRemoteVideo.mp4"></mat-video> -->
 
-<div class="row h-75 no-gutters">
-  <div class="col-9 bg-light border h-100 d-flex justify-content-center overlay-container">
-    <video class="video-fluid z-depth-1" autoplay loop controls muted *ngIf="isSize"
-      [ngClass]="{'fullscreen': isCardExpanded}">
-      <button mat-icon-button (click)="expand()"></button>
-      <source src="{{videoSource}}" type="video/mp4" />
-    </video>
-  </div>
-
-  <div class="scrollable h-100" style="margin: 1%;">
-    <p><b>Name</b> Hi</p>
+<div class="video-margin">
+  <div class="h-90 w-100">
+    <div class="justify-content-center overlay-container">
+      <video class="video-fluid z-depth-1" autoplay loop controls muted *ngIf="isSize"
+        [ngClass]="{'fullscreen': isCardExpanded}">
+        <button mat-icon-button (click)="expand()"></button>
+        <source src="{{videoSource}}" type="video/mp4" />
+      </video>
+    </div>
+  
+    <div class="scrollable" style="margin: 1%;">
+      <p><b>Name</b> Hi</p>
+    </div>
   </div>
 </div>
 
-<!-- <div class="video">
-      <video muted autoplay loop style="width: 500px">
-          <source src="{{videoSource}}" type="video/mp4" />
-          Browser not supported
-      </video>
-  </div> -->
 
 <!-- <mat-card [ngClass]="{'fullscreen': isCardExpanded}">
     <mat-card-title>

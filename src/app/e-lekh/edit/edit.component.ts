@@ -5,7 +5,9 @@ import { FileUploader } from 'ng2-file-upload';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { Subject } from 'rxjs';
 import { takeUntil, take } from 'rxjs/operators';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { ConfirmComponent } from '../confirm/confirm.component';
 
 const url = 'http://localhost:3000/upload';
 @Component({
@@ -25,7 +27,7 @@ export class EditComponent implements OnInit {
   attachmentList: any = [];
 
   @ViewChild('autosize') autosize: CdkTextareaAutosize;
-  constructor(private _ngZone: NgZone, private router: Router) { 
+  constructor(private _ngZone: NgZone, private router: Router, public dialog: MatDialog) { 
     this.uploader.onCompleteItem = (item:any, response: any, status:any, headers: any) => {
       this.attachmentList.push(JSON.parse(response));
     }
@@ -36,6 +38,14 @@ export class EditComponent implements OnInit {
 
   editStory(): void {
     this.router.navigate(['/']);
+  }
+
+  openDialog() {
+    this.dialog.open(ConfirmComponent, {
+      data: {
+        animal: 'panda'
+      }
+    });
   }
 
   triggerResize() {

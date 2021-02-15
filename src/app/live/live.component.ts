@@ -19,7 +19,7 @@ export class LiveComponent implements OnInit {
   }
 
   @ViewChild('video') matVideo: MatVideoComponent;
-  videoSource = 'https://pixabay.com/videos/sea-ocean-wave-beach-blue-nature-24216/';           // 'https://mdbootstrap.com/img/video/Sail-Away.mp4';
+  videoSource = 'https://mdbootstrap.com/img/video/Sail-Away.mp4';
   video: HTMLVideoElement;
 
   isSize = true;

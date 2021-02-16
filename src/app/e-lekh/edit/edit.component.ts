@@ -48,6 +48,14 @@ export class EditComponent implements OnInit {
     });
   }
 
+  // openDialog(): void {
+  //   let dialogRef = this.dialog.open(FillComponent, {
+  //     width: '600px',
+  //     data: 'Send Data'
+  //   });
+  //   dialogRef.componentInstance.event.subscribe((result) => {});
+  // }
+
   triggerResize() {
     this._ngZone.onStable.pipe(take(1)).subscribe(() => this.autosize.resizeToFitContent(true));
   }

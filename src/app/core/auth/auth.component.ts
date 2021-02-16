@@ -25,10 +25,11 @@ export class AuthComponent implements OnInit {
   }
 
   login() {
-    if (this.ifAdmin) {
-      this.router.navigate(['/en/admin']);
-    }
-    this.router.navigate(['/en/post']);
+    // if (this.ifAdmin) {
+    //   this.router.navigate(['/en/admin']);
+    // }
+    // this.router.navigate(['/en/post']);
+    this.router.navigate(['/en/admin']);
   }
 
 }

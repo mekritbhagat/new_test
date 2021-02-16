@@ -164,3 +164,55 @@ export class LiveComponent implements OnInit {
 
 
 
+// var socket = io.connect('http://localhost:5000');
+
+// var message = document.getElementById('message'),
+//     handle = document.getElementById('handle'),
+//     btn = document.getElementById('send'),
+//     output = document.getElementById('screen');
+
+// btn.addEventListener('click', function() {
+//     socket.emit('chat', {
+//         message: message.value,
+//         handle: handle.value
+//     });
+// });
+
+// message.addEventListener('keypress', function() {
+//     socket.emit('typing', handle.value);
+// });
+
+// socket.on('chat', function(data) {
+//     output2.innerHTML = "";
+//     output.innerHTML += '<p><strong>'+data.handle +':</strong>' +data.message + '</p>';
+// });
+
+// socket.on('typing', function(data) {
+//     output2.innerHTML += '<p><em>' + data + 'is typing a message ... </em></p>';
+// });
+
+
+
+// var express = require('express');
+// var socket = require('socket.io');
+
+// var app = express();
+
+// app.use(express.static('public'));
+
+// var server = app.listen(5000, function() {
+//     console.log('Application running on port 5000');
+// });
+
+// var io = socket(server);
+// io.on('connection', function(socket) {
+//     console.log('mage socket connection', socket.id);
+
+//     socket.on('chat', function(data) {
+//         io.sockets.emit('chat', data);
+//     });
+
+//     socket.on('typing', function(data) {
+//         socket.broadcast.emit('typing', data);
+//     })
+// });

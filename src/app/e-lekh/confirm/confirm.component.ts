@@ -1,6 +1,8 @@
 import { Component, OnInit, ChangeDetectionStrategy, OnDestroy, ChangeDetectorRef, Inject } from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-confirm',
@@ -12,9 +14,6 @@ export class ConfirmComponent implements OnInit, OnDestroy {
 
   events: string[] = [];
   opened: boolean;
-
-  ngOnInit(): void {
-  }
 
   mobileQuery: MediaQueryList;
 
@@ -29,14 +28,66 @@ export class ConfirmComponent implements OnInit, OnDestroy {
 
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, @Inject(MAT_DIALOG_DATA) public data: DialogData) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, @Inject(MAT_DIALOG_DATA) public data: DialogData, private formBuilder: FormBuilder,
+  private http: HttpClient) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
+
+  exampleForm: FormGroup;
+  userForm: FormGroup;
+  myFormValueChanges$;
+
+  ngOnInit() {
+    this.exampleForm = this.formBuilder.group({
+      // companyName: ['', [Validators.required, Validators.maxLength(25)]],
+      // countryName: [''],
+      // city: [''],
+      // zipCode: [''],
+      // street: [''],
+    });
+
+    // this.myFormValueChanges$ = this.exampleForm.controls['units'].valueChanges;
+
+    // const geoIpInfo = this.storage.retrieve('geoIpInfo');
+    // if (geoIpInfo) {
+    //   this.exampleForm.patchValue({
+    //     countryName: geoIpInfo.country_name,
+    //     city: geoIpInfo.city,
+    //     zipCode: geoIpInfo.postal,
+    //     companyName: geoIpInfo.org
+    //   });
+    // } else {
+    //   this.getCountryByIpOnline().subscribe((res) => {
+    //       console.log('This is your IP information: ', res );
+    //       this.storage.store('geoIpInfo', res);
+    //       this.exampleForm.patchValue({
+    //         countryName: res.country_name,
+    //         city: res.city,
+    //         zipCode: res.postal,
+    //         companyName: geoIpInfo.org
+    //       });
+    //   }, (err) => {
+    //       this.exampleForm.patchValue({countryName: 'N/A', city: 'N/A', zipCode: 'N/A'});
+    //   });
+    // }
+  }
+
+  emailFormControl = new FormControl('', [
+    Validators.required,
+    Validators.email,
+  ]);
+
   ngOnDestroy(): void {
+    this.myFormValueChanges$.unsubscribe();
     this.mobileQuery.removeListener(this._mobileQueryListener);
+  }
+
+  save(model: any, isValid: boolean, e: any) {
+    e.preventDefault();
+    alert('Form data are: ' + JSON.stringify(model));
   }
 
 }

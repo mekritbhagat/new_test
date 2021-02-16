@@ -23,7 +23,6 @@ export class AboutComponent implements OnInit {
   // ngOnInit(): void {
   // }
 
-  name = 'Angular Reactive Experience';
   exampleForm: FormGroup;
   userForm: FormGroup;
   myFormValueChanges$;

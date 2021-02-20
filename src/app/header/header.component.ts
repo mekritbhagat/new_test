@@ -10,7 +10,8 @@ import { environment } from 'src/environments/environment';
 })
 export class HeaderComponent implements OnInit {
 
-  subtitle = environment.title;
+  subtitle = environment.neTitle;
+  menus = ["प्रसारण", "विश्व", "खेलकुद", "व्यापार", "मनोरञ्जन", "प्रविधिहरू", "जीवनशैली", "खाना र संस्कृति", "विश्व नेताहरु", "ट्विटर राय", "लेख", "सम्पर्क", "राजनीति"];
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -18,6 +19,10 @@ export class HeaderComponent implements OnInit {
 
   gotoLogin() {
     this.router.navigate(['/en/auth']);
+  }
+
+  connectToOfficial() {
+    this.router.navigate(['/about']);
   }
 
 }

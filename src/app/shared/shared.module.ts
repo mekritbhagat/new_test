@@ -4,7 +4,6 @@ import { NgModule, Injector } from '@angular/core';
 import { MaterialModule } from './material/material.module';
 import { LazyImageComponent } from './lazy-image/lazy-image.component';
 import { LazyImageDataComponent } from './lazy-image-data/lazy-image-data.component';
-import { ConfirmdialogComponent } from './confirmdialog/confirmdialog.component';
 
 @NgModule({
   imports: [
@@ -13,7 +12,7 @@ import { ConfirmdialogComponent } from './confirmdialog/confirmdialog.component'
     //CoreModule,
     // MatFileUploadModule,
   ],
-  declarations: [LazyImageComponent, LazyImageDataComponent, ConfirmdialogComponent],
+  declarations: [LazyImageComponent, LazyImageDataComponent],
   exports: [ MaterialModule ],
   entryComponents: [LazyImageComponent, LazyImageDataComponent]
 })

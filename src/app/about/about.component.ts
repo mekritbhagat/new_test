@@ -1,8 +1,12 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
 import { Validators, FormBuilder, FormGroup, FormControl, FormArray } from '@angular/forms';
 import {HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
+
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
+import { AboutService } from "./about.service";
 // import 'rxjs/Rx';
 // import 'rxjs/add/operator/catch';
 // import 'rxjs/add/operator/map';
@@ -16,7 +20,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./about.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnInit, OnDestroy {
 
   // constructor() { }
 
@@ -24,13 +28,14 @@ export class AboutComponent implements OnInit {
   // }
 
   exampleForm: FormGroup;
-  userForm: FormGroup;
+  // userForm: FormGroup;
   myFormValueChanges$;
 
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
     public dialog: MatDialog,
+    private aboutService: AboutService
   ) { }
 
   ngOnInit() {
@@ -82,7 +87,15 @@ export class AboutComponent implements OnInit {
     Validators.email,
   ]);
 
+  userForm = new FormGroup({
+    firstName: new FormControl('', Validators.nullValidator && Validators.required),
+    lastName: new FormControl('', Validators.nullValidator && Validators.required),
+    email: new FormControl('', Validators.nullValidator && Validators.required)
+  });
+
   ngOnDestroy(): void {
+    this.destroy$.next(true);
+    this.destroy$.unsubscribe();
     this.myFormValueChanges$.unsubscribe();
   }
 
@@ -100,6 +113,26 @@ export class AboutComponent implements OnInit {
   //     unitTotalPrice: [{value: '', disabled: true}]
   //   });
   // }
+
+  users: any[] = [];
+  userCount = 0;
+
+  destroy$: Subject<boolean> = new Subject<boolean>();
+
+  onSubmit() {
+    this.aboutService.addUser(this.userForm.value).pipe(takeUntil(this.destroy$)).subscribe(data => {
+      console.log('message::::', data);
+      this.userCount = this.userCount + 1;
+      console.log(this.userCount);
+      this.userForm.reset();
+    });
+  }
+
+  getAllUsers() {
+    this.aboutService.getUsers().pipe(takeUntil(this.destroy$)).subscribe((users: any[]) => {
+        this.users = users;
+    });
+  }
 
   private extractData(res: Response) {
     const body = res.json();

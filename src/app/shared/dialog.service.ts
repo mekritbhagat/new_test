@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
-import { ConfirmdialogComponent } from './confirmdialog/confirmdialog.component';
 
 @Injectable({
   providedIn: 'root',
@@ -20,7 +19,7 @@ export class DialogService {
   constructor(private dialog: MatDialog) { }
 
   openConfirmDialog(msg){
-   return this.dialog.open(ConfirmdialogComponent,{
+   return this.dialog.open(null,{
       width: '390px',
       panelClass: 'confirm-dialog-container',
       disableClose: true,

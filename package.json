@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "serve": "concurrently \"ng serve --host www.dnews.com --disable-host-check --ssl true --proxy-config proxy.join.json --open\"",
+    "serve": "concurrently \"ng serve --host themithila.com --disable-host-check --ssl true --proxy-config proxy.join.json --open\"",
     "serve:e": "http-server -c-1 -g",
     "watch-ts": "tsc -w",
     "start": "nodemon dist/app.js",

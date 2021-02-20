@@ -14,7 +14,6 @@ import { ViewModule } from './view/view.module';
 import { RefreshModule } from './refresh/refresh.module';
 import { LiveModule } from './live/live.module';
 import { AboutModule } from './about/about.module';
-import { QuoteModule } from './quote/quote.module';
 import { CstateComponent } from './cstate/cstate.component';
 import { HeaderComponent } from './header/header.component';
 import { LeadersComponent } from './leaders/leaders.component';

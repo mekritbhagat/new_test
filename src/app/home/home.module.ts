@@ -8,7 +8,6 @@ import { TodayNewsComponent } from './today-news/today-news.component';
 import { SharedModule } from '../shared/shared.module';
 import { StmarketComponent } from './stmarket/stmarket.component';
 import { CurrencyComponent } from './currency/currency.component';
-import { QuoteModule } from '../quote/quote.module';
 
 export const BreakPointProvider = {
   provide: BREAKPOINTS,
@@ -30,7 +29,6 @@ const routes: Routes = [
   imports: [
     CommonModule,
     SharedModule,
-    QuoteModule,
     RouterModule.forChild(routes)
   ],
   providers: [BreakPointProvider],

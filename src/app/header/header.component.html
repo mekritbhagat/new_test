@@ -9,7 +9,9 @@
         </div>
 
         <div class="col-4 text-center">
-            <a class="btn btn-sm btn-outline-primary" (click)="gotoLogin()">Sign up</a>
+            <button mat-stroked-button (click)="connectToOfficial()">सम्पर्क</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button mat-stroked-button (click)="gotoLogin()">लग-इन</button>
         </div>
     </div>
 </header>
@@ -23,41 +25,41 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" [routerLink]="'/live'">Live</a>
+            <a class="nav-link" [routerLink]="'/live'">प्रसारण</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" [routerLink]="'/ct/cate/global'">World</a>
+            <a class="nav-link" [routerLink]="'/ct/cate/global'">विश्व</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" [routerLink]="'/ct/cate/sport'">Sport</a>
+            <a class="nav-link" [routerLink]="'/ct/cate/sport'">खेलकुद</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" [routerLink]="'/ct/cate/busi'">Business</a>
+            <a class="nav-link" [routerLink]="'/ct/cate/busi'">व्यापार</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" [routerLink]="'/ct/cate/entertain'">Filmy</a>
+            <a class="nav-link" [routerLink]="'/ct/cate/entertain'">मनोरञ्जन</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" [routerLink]="'/ct/cate/prabidhi'">Tech</a>
+            <a class="nav-link" [routerLink]="'/ct/cate/prabidhi'">प्रविधिहरू</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" [routerLink]="'/ct/cate/lifestyle'">Lifestyle</a>
+            <a class="nav-link" [routerLink]="'/ct/cate/lifestyle'">जीवनशैली</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" [routerLink]="'/ct/cate/food'">Food & Culture</a>
+            <a class="nav-link" [routerLink]="'/ct/cate/food'">खाना र संस्कृति</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" [routerLink]="'/ct/cate/global'">Leaders</a>
+            <a class="nav-link" [routerLink]="'/ct/cate/global'">विश्व नेताहरु</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" [routerLink]="'/ct/cate/opinion'">Opinion</a>
+            <a class="nav-link" [routerLink]="'/ct/cate/opinion'">ट्विटर राय</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" [routerLink]="'/lekh'">Lekh</a>
+            <a class="nav-link" [routerLink]="'/lekh'">लेख</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" [routerLink]="'/about'">Contact</a>
-        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link" [routerLink]="'/about'">सम्पर्क</a>
+        </li> -->
     </ul>
 </nav>
 

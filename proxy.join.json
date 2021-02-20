@@ -1,14 +1,18 @@
 {
     "/api": {
-        "target": "https://www.dnews.com:8080/",
+        "target": "http://themithila.com:3000",
         "secure": false
     },
     "/auth": {
-        "target": "https://www.dnews.com:8080/",
+        "target": "http://themithila.com:3000",
         "secure": false
     },
-    "/lekh": {
-        "target": "https://www.dnews.com:8080/",
+    "/new": {
+        "target": "http://themithila.com:3000",
+        "secure": false
+    },
+    "/": {
+        "target": "http://themithila.com:3000",
         "secure": false
     }
 }

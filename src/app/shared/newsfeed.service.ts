@@ -10,6 +10,7 @@ import { share, exhaustMap } from 'rxjs/operators';
 })
 
 export class NewsFeedService {
+    rootURL = '/api';
 
     loadNews$ = '';
     refresh$ = new BehaviorSubject(null);
@@ -17,6 +18,15 @@ export class NewsFeedService {
         exhaustMap(() => this.loadNews$)
     );
     constructor(private http: HttpClient) {}
+
+  
+    getUsers() {
+      return this.http.get(this.rootURL + '/users');
+    }
+  
+    addUser(user: any) {
+      return this.http.post(this.rootURL + '/user', {user});
+    }
 
     // news$: Observable<News[]> = this.http.get('/').pipe(
     //     map(res => res.json()),
@@ -38,6 +48,7 @@ export class NewsFeedService {
     getSources() {
         return this.http.get('');
     }
+
 }
 
 export interface News {

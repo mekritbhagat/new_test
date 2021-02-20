@@ -29,7 +29,7 @@ export class AuthComponent implements OnInit {
     //   this.router.navigate(['/en/admin']);
     // }
     // this.router.navigate(['/en/post']);
-    this.router.navigate(['/en/admin']);
+    this.router.navigate(['/en/post']);
   }
 
 }
